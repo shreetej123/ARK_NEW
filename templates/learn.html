@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning - AIML Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AIML Learn</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/resources" class="nav-link">Resources</a></li>
+                <li><a href="/learn" class="nav-link active">Learn</a></li>
+                <li><a href="/profile" class="nav-link">Profile</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-secondary">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+                <button id="logoutBtn" class="btn btn-secondary" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h1>Interactive Learning Tools</h1>
+            <p>Use AI-powered tools to enhance your learning experience</p>
+        </section>
+
+        <div class="learning-tools">
+            <div class="tool-section">
+                <h2>Concept Explanation</h2>
+                <p>Enter any AI/ML concept to get a detailed explanation</p>
+                <div class="tool-interface">
+                    <input type="text" id="conceptInput" placeholder="e.g., Neural Networks, Machine Learning, Deep Learning">
+                    <button class="btn btn-primary" onclick="explainConcept()">Explain</button>
+                </div>
+                <div id="conceptResult" class="result-container"></div>
+            </div>
+
+            <div class="tool-section">
+                <h2>Code Generation</h2>
+                <p>Generate code examples for ML algorithms</p>
+                <div class="tool-interface">
+                    <input type="text" id="codeTask" placeholder="e.g., Linear Regression, Neural Network, Classification">
+                    <select id="codeLanguage">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="generateCode()">Generate Code</button>
+                </div>
+                <div id="codeResult" class="result-container"></div>
+            </div>
+
+            <div class="tool-section">
+                <h2>Visual Learning Aids</h2>
+                <p>Interactive visualizations of ML concepts</p>
+                <div class="visualization-grid">
+                    <button class="viz-button" onclick="showVisualization('neural-network')">
+                        <span>🧠</span>
+                        Neural Network
+                    </button>
+                    <button class="viz-button" onclick="showVisualization('decision-tree')">
+                        <span>🌳</span>
+                        Decision Tree
+                    </button>
+                </div>
+                <div id="visualizationResult" class="result-container"></div>
+            </div>
+
+            <div class="tool-section">
+                <h2>Audio Lessons</h2>
+                <p>Convert any text to audio for learning on-the-go</p>
+                <div class="tool-interface">
+                    <textarea id="audioText" rows="4" placeholder="Enter text to convert to audio..."></textarea>
+                    <button class="btn btn-primary" onclick="generateAudio()">Generate Audio</button>
+                </div>
+                <div id="audioResult" class="result-container"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/learn.js"></script>
+</body>
+</html>

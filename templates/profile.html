@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AIML Learning Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AIML Learn</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/resources" class="nav-link">Resources</a></li>
+                <li><a href="/learn" class="nav-link">Learn</a></li>
+                <li><a href="/profile" class="nav-link active">Profile</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h1>Your Learning Dashboard</h1>
+            <p>Track your progress and achievements</p>
+        </section>
+
+        <div class="profile-container">
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h3 id="completedLessons">0</h3>
+                        <p>Lessons Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <h3 id="currentStreak">0</h3>
+                        <p>Day Streak</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3 id="totalPoints">0</h3>
+                        <p>Points Earned</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <h3 id="userLevel">Beginner</h3>
+                        <p>Current Level</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="content-section">
+                    <h2>Progress Overview</h2>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div id="progressBar" class="progress-fill"></div>
+                        </div>
+                        <p><span id="progressPercentage">0</span>% Complete</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Achievements</h2>
+                    <div id="achievementsList" class="achievements-grid">
+                        <div class="loading">Loading achievements...</div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Recent Activity</h2>
+                    <div id="activityList" class="activity-list">
+                        <div class="loading">Loading activity...</div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Personalized Learning Path</h2>
+                    <p>Based on your progress, we recommend:</p>
+                    <div id="recommendationsList" class="recommendations-list">
+                        <div class="recommendation-card">
+                            <h4>Continue Learning Neural Networks</h4>
+                            <p>You're making great progress! Keep going with intermediate concepts.</p>
+                            <button class="btn btn-primary">Continue</button>
+                        </div>
+                        <div class="recommendation-card">
+                            <h4>Try a Computer Vision Project</h4>
+                            <p>Apply your knowledge with a hands-on project in image classification.</p>
+                            <button class="btn btn-primary">Start Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>

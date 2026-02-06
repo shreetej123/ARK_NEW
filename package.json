@@ -1,0 +1,13 @@
+{
+  "name": "aiml-learning-platform",
+  "version": "1.0.0",
+  "description": "AI/ML Learning Platform for Students",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python app.py",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": ["aiml", "education", "learning"],
+  "author": "",
+  "license": "MIT"
+}

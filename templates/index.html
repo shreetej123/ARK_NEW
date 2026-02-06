@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Learning Platform - Home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AIML Learn</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/resources" class="nav-link">Resources</a></li>
+                <li><a href="/learn" class="nav-link">Learn</a></li>
+                <li><a href="/profile" class="nav-link">Profile</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-secondary">Login</button>
+                <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+                <button id="logoutBtn" class="btn btn-secondary" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Master AI & Machine Learning</h1>
+                <p class="hero-subtitle">Comprehensive learning platform with interactive tutorials, code generation, visual aids, and personalized learning paths</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='/learn'">Start Learning</button>
+                    <button class="btn btn-secondary btn-large" onclick="window.location.href='/resources'">Browse Resources</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Learning Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Concept Explanations</h3>
+                    <p>Get clear, detailed explanations of AI/ML concepts with real-world examples</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Code Generation</h3>
+                    <p>Generate working code examples for various ML algorithms and implementations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Visual Learning</h3>
+                    <p>Interactive visualizations of neural networks, decision trees, and more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Audio Lessons</h3>
+                    <p>Listen to lessons on-the-go with text-to-speech functionality</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Learning</h3>
+                    <p>Custom learning paths based on your progress and interests</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your learning journey with achievements and streaks</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2 class="section-title">Topics Covered</h2>
+            <div class="categories-grid">
+                <div class="category-tag">Neural Networks</div>
+                <div class="category-tag">Machine Learning</div>
+                <div class="category-tag">Deep Learning</div>
+                <div class="category-tag">Natural Language Processing</div>
+                <div class="category-tag">Computer Vision</div>
+                <div class="category-tag">Reinforcement Learning</div>
+                <div class="category-tag">Data Science</div>
+                <div class="category-tag">Model Optimization</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group" id="nameGroup" style="display:none;">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <p class="auth-toggle">
+                <span id="toggleText">Don't have an account?</span>
+                <a href="#" id="toggleMode">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
